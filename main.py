@@ -1,18 +1,21 @@
 from random import randint
 
-respostas = {1 : "Sim", 2 : "Não", 3 : "Não sei te dizer"}
+# The dictionary to the 3 possible answers
+answers = {1 : "Yes", 2 : "No", 3 : "I don't know"}
 
+# Main loop to read the "inputs"
 def main():
     run = 1
     while run == 1:
-        comando = input("-> ")
-        if comando != "quit":
+        the_input = input(">> ")
+        if the_input != "quit":
             gerarResposta()
         else:
             run = 0
 
+# Generate an answer
 def gerarResposta():
-    possibilidade = randint(1, 3)
-    print(respostas[possibilidade])
+    possibility = randint(1, 3)
+    print(answers[possibility])
 
 main()
