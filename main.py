@@ -9,12 +9,12 @@ def main():
     while run == 1:
         the_input = input(">> ")
         if the_input != "quit":
-            gerarResposta()
+            answerGenerator()
         else:
             run = 0
 
 # Generate an answer
-def gerarResposta():
+def answerGenerator():
     possibility = randint(1, 3)
     print(answers[possibility])
 
